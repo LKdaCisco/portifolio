@@ -283,8 +283,8 @@ section#sobre #txt-sobre .btn-social button{
 }
 
 #projetos .img-projetos{
-    width: 320px; /* Ajustei a largura das imagens de projeto */
-    height: 400px; /* Ajustei a altura das imagens de projeto */
+    width: 1110px; /* Ajustei a largura das imagens de projeto */
+    height: 750px; /* Ajustei a altura das imagens de projeto */
     background-size: cover;
     background-position: center center; /* Centraliza a imagem */
     border-radius: 20px; /* Bordas mais arredondadas */
@@ -629,4 +629,97 @@ form #btn-enviar input:hover {
     #btn-to-top i {
         font-size: 18px;
     }
+}
+
+/* Estilos do Rodapé */
+#rodape {
+ background-color: #1a1a1a;
+ color: #fff;
+ padding: 20px 5%;
+ border-top: 3px solid #ff0000;
+ text-align: center;
+ font-size: 0.9em;
+}
+
+#rodape #interface {
+ max-width: 1200px;
+ margin: 0 auto;
+}
+
+#rodape p {
+ margin: 0;
+}
+
+#titulo-rodape {
+ font-weight: bold;
+ color: #eee;
+}
+
+.colorido {
+ font-weight: bold;
+}
+
+/* Animação de cor para o título "Meu Portfólio" */
+#rodape .colorido {
+ animation: mudarCorTitulo 3s infinite alternate;
+}
+
+@keyframes mudarCorTitulo {
+ 0% {
+  color: red;
+ }
+
+ 20% {
+  color: blue;
+ }
+
+ 40% {
+  color: green;
+ }
+
+ 60% {
+  color: yellow;
+ }
+
+ 80% {
+  color: orange;
+ }
+
+ 100% {
+  color: purple;
+ }
+}
+
+/* Animação de cor para o nome */
+.nome-colorido {
+ font-weight: bold;
+ display: inline-block;
+ animation: mudarCorNome 3s infinite alternate;
+ animation-delay: var(--delay); /* Atraso individual para cada letra */
+}
+
+@keyframes mudarCorNome {
+ 0% {
+  color: cyan;
+ }
+
+ 20% {
+  color: lime;
+ }
+
+ 40% {
+  color: magenta;
+ }
+
+ 60% {
+  color: red;
+ }
+
+ 80% {
+  color: blue;
+ }
+
+ 100% {
+  color: green;
+ }
 }
