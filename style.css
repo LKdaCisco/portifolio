@@ -1,0 +1,632 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+ 
+/* reset as configuraçõpes da página */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+ 
+body{
+    background-color: black;
+    height: 100vh;
+}
+ 
+#interface{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ 
+/* tag semântica <header> */
+header{
+    padding: 10px 5%;
+    background-color: #1a1a1a; /* Fundo mais escuro para o cabeçalho */
+    border-bottom: 3px solid #ff0000; /* Linha vermelha na parte inferior */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+ 
+#logo img{
+    width: 100px; /* Reduzi um pouco para um visual mais integrado */
+    height: 100px;
+    transition: transform .3s ease-in-out; /* Adiciona transição na logo */
+}
+
+#logo img:hover {
+    transform: scale(1.08); /* Efeito de zoom ao passar o mouse */
+}
+ 
+header > #interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+header a {
+    color: grey;
+    text-decoration: none;
+    display: flex; /* Permite alinhar ícone e texto */
+    align-items: center; /* Alinha verticalmente ícone e texto */
+    transition: .3s;
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    font-size: 18px; /* Ajuste o tamanho da fonte */
+}
+
+header a:hover{
+    color: whitesmoke;
+    transform: scale(1.15);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+header nav ul li{
+    display: inline-block;
+    padding: 0 25px; /* Reduzi o padding para os ícones */
+    font-family: "Space Grotesk", sans-serif; /* Mudei para uma fonte mais moderna */
+    font-size: 19px; /* Tamanho da fonte dos itens do menu */
+    font-weight: 500;
+}
+
+header #btn-contato button{
+    padding: 12px 22px; /* Ajuste o padding */
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px; /* Ajuste o tamanho da fonte */
+    font-weight: 600;
+    background-color: rgb(255, 0, 0);
+    color: white; /* Cor do texto do botão */
+    border: none; /* Removi a borda */
+    border-radius: 25px; /* Mais arredondado */
+    cursor: pointer;
+    transition: all .3s ease; /* Transição suave para hover */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre o ícone e o texto no botão */
+}
+
+header #btn-contato button:hover{
+    box-shadow: 0 0 20px orangered; /* Sombra mais pronunciada */
+    transform: translateY(-3px); /* Leve elevação ao passar o mouse */
+}
+
+section #topo-site{
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+#topo-site {
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os elementos quebrem a linha em telas menores */
+    text-align: center; /* Centraliza o texto em telas menores */
+}
+
+#topo-site img{
+    width: 300px; /* Reduzi um pouco o tamanho da imagem */
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    border: 5px solid #ff0000; /* Adiciona uma borda vermelha vibrante */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); /* Sombra que brilha */
+}
+
+#topo-site h1{
+    color: aliceblue;
+    font-size: 45px; /* Aumentei um pouco o tamanho da fonte */
+    list-style: none;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    line-height: 1.2; /* Altura da linha para melhor leitura */
+}
+
+#topo-site span{
+    color: rgb(239, 22, 22);
+    font-size: 45px;
+    list-style: none;
+    text-align: center;
+}
+
+#topo-site p{
+    color: aliceblue;
+    font-size: 16px; /* Aumentei a fonte do parágrafo */
+    margin: 25px 0; /* Ajustei a margem */
+    margin-right: 50px;
+    text-align: justify;
+    line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+}
+
+@keyframes flutuar {
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px;
+    }
+}
+
+/* especialidades */
+
+especialidades{
+    margin-top: 50px;
+    padding: 40px 0 ;
+}
+
+h2{
+    color:aliceblue;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px; /* Espaço abaixo dos títulos de seção */
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Reduzi o gap para as caixas de especialidade */
+    flex-wrap: wrap; /* Permite que as caixas quebrem a linha */
+}
+
+#especialidades .especialidades-box{
+    color: aliceblue;
+    background-color: #222; /* Fundo para as caixas de especialidade */
+    padding: 30px; /* Ajustei o padding */
+    margin-top: 25px; /* Ajustei a margem superior */
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: .2s;
+    text-align: center; /* Centraliza o conteúdo da caixa */
+    flex: 1; /* Faz com que as caixas ocupem o espaço disponível */
+    min-width: 280px; /* Largura mínima para as caixas */
+    max-width: 350px; /* Largura máxima para as caixas */
+    border: 1px solid #444; /* Borda sutil */
+}
+#especialidades .especialidades-box:hover{
+    transform: translateY(-10px) scale(1.02); /* Efeito de elevação e leve zoom */
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.4); /* Sombra mais destacada */
+    background-color: #2c2c2c; /* Fundo um pouco mais claro no hover */
+}
+#especialidades .especialidades-box i {
+    font-size: 70px; /* Reduzi o tamanho dos ícones */
+    color: rgb(255, 0, 0);
+    margin-bottom: 15px; /* Espaço abaixo do ícone */
+}
+
+#especialidades .especialidades-box h3{
+    font-size: 22px; /* Ajustei o tamanho da fonte do título */
+    margin: 10px 0;
+    color: white;
+}
+#especialidades .especialidades-box p{
+    font-size: 15px; /* Ajustei o tamanho da fonte do parágrafo */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+/* Sobre mim */
+section {
+    margin-top: 30px;
+    padding: 80px 5%;
+}
+
+section #interface{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    text-align: justify;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+section #img-sobre img{
+    width: 350px;
+    border-radius: 10%;
+    border: 5px solid #ff0000; /* Adiciona uma borda vermelha vibrante */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); /* Sombra que brilha */
+}
+
+section #txt-sobre{
+    color: aliceblue;
+    max-width: 600px; /* Limita a largura do texto para melhor leitura */
+}
+
+section #txt-sobre h2{
+    font-size: 40px;
+    text-align: left;
+}
+
+section#sobre #txt-sobre span{
+    color: red;
+    display: block;
+}
+
+section#sobre #txt-sobre p {
+    font-size: 21px;
+    font-style: italic;
+    margin: 36px 0;
+}
+
+section#sobre #txt-sobre .btn-social button{
+    width: 55px; /* Reduzi o tamanho dos botões sociais */
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 0);
+    font-size: 24px; /* Ajustei o tamanho do ícone */
+    color: white; /* Cor do ícone */
+    cursor: pointer;
+    margin: 0 6px; /* Reduzi a margem entre os botões */
+    transition: .3s;
+}
+
+#txt-sobre .btn-social button:hover{
+    transform: scale(1.2); /* Efeito de zoom mais pronunciado */
+    box-shadow: 0 0 25px red; /* Sombra mais forte */
+}
+
+#projetos{
+    padding: 70px;
+    box-shadow: 0 0 25px 0 white;
+    justify-content: space-around;
+    background-color: #1a1a1a; /* Fundo para a seção de projetos */
+    border-top: 3px solid #ff0000;
+}
+
+#projetos #interface {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os projetos */
+}
+
+#projetos .img-projetos{
+    width: 320px; /* Ajustei a largura das imagens de projeto */
+    height: 400px; /* Ajustei a altura das imagens de projeto */
+    background-size: cover;
+    background-position: center center; /* Centraliza a imagem */
+    border-radius: 20px; /* Bordas mais arredondadas */
+    transition: all .6s ease-in-out; /* Transição mais suave */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* Garante que o overlay não vaze */
+    border: 3px solid #ff0000; /* Borda vermelha */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3); /* Sombra sutil */
+}
+
+#projetos .img-projetos:hover{
+    background-position: 50% 100%; /* Exemplo de movimento na imagem ao hover */
+    transform: scale(1.05); /* Leve zoom ao hover */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6); /* Sombra mais intensa */
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro para o overlay */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px; /* Tamanho da fonte do overlay */
+    font-weight: 700;
+    color: white; /* Texto branco */
+    opacity: 0;
+    transition: opacity .4s ease; /* Transição suave do overlay */
+    text-align: center;
+    padding: 15px;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+
+/* formulário */
+#formulario h2 {
+    color: aliceblue;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px; /* Adicionado um espaço abaixo do título */
+}
+ 
+#formulario p {
+    color: aliceblue;
+    text-align: center;
+    font-size: 21px;
+    font-style: italic;
+    margin-bottom: 40px; /* Aumentado o espaço abaixo da descrição */
+}
+ 
+form {
+    margin: 0 auto;
+    padding: 30px 5%;
+    width: 700px; /* largura do formulário */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1a1a1a; /* Um tom um pouco mais claro para o fundo do formulário */
+    border-radius: 15px; /* Bordas arredondadas para o formulário */
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3); /* Uma sombra sutil com a cor vermelha do seu tema */
+}
+ 
+form input, form textarea {
+    width: 100%;
+    background-color: #333; /* Fundo dos inputs um pouco mais escuro */
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 8px; /* Bordas arredondadas para os inputs */
+    color: aliceblue;
+    font-size: 18px;
+    margin-bottom: 15px; /* Espaçamento entre os inputs */
+}
+ 
+form .input-single {
+    position: relative;
+    margin-bottom: 20px; /* Espaço maior entre os grupos de input */
+}
+ 
+form .input-single label {
+    color: #bbb; /* Cor do label um pouco mais clara para melhor contraste */
+    font-size: 18px; /* Tamanho da fonte do label ligeiramente menor */
+    font-style: normal; /* Removido o itálico para o label */
+    position: absolute;
+    left: 15px; /* Posição do label ajustada */
+    top: 15px; /* Posição do label ajustada */
+    cursor: text;
+    transition: all 0.3s ease; /* Transição mais suave */
+}
+ 
+form .input-single .input {
+    width: 100%;
+    border: 1px solid #555; /* Borda sutil para os inputs */
+    outline: none;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #222; /* Fundo dos inputs */
+    border-radius: 8px;
+}
+ 
+form .input-single .input:focus {
+    border: 2px solid rgb(255, 0, 0); /* Borda vermelha ao focar */
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5); /* Sombra ao focar */
+}
+ 
+form .input-single .input:focus ~ label,
+form .input-single .input:valid ~ label {
+    transform: translateY(-28px) translateX(-5px) scale(0.85); /* Ajuste para o label flutuante */
+    color: rgb(255, 0, 0); /* Cor vermelha para o label flutuante */
+    font-size: 16px; /* Tamanho do label flutuante */
+    font-style: normal;
+    background-color: #1a1a1a; /* Fundo para o label flutuante */
+    padding: 0 5px;
+    border-radius: 3px;
+}
+ 
+form textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    min-height: 100px; /* Altura mínima para a área de texto */
+    max-height: 300px; /* Altura máxima para a área de texto */
+}
+ 
+form #btn-enviar {
+    margin-top: 30px; /* Mais espaço antes do botão */
+    text-align: center;
+}
+ 
+form #btn-enviar input {
+    width: 200px; /* Largura maior para o botão */
+    height: 55px; /* Altura maior para o botão */
+    padding: 10px 25px;
+    background-color: rgb(255, 0, 0);
+    color: white; /* Texto do botão branco para melhor contraste */
+    font-weight: 700;
+    font-size: 20px; /* Tamanho da fonte do botão */
+    border-radius: 25px; /* Mais arredondado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none; /* Remover a borda padrão do input type submit */
+}
+ 
+form #btn-enviar input:hover {
+    transform: translateY(-3px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4); /* Sombra mais pronunciada */
+}
+
+/* Botão "Retornar ao Início" */
+#btn-to-top {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 25px; /* Distância do fundo */
+    right: 25px; /* Distância da direita */
+    background-color: rgb(255, 0, 0); /* Cor de fundo vermelha */
+    color: white; /* Cor do texto e ícone */
+    border: none; /* Sem borda */
+    border-radius: 50px; /* Bem arredondado */
+    padding: 15px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: 600;
+    cursor: pointer;
+    display: flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Alinha verticalmente */
+    gap: 8px; /* Espaço entre o ícone e o texto */
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4); /* Sombra para destaque */
+    transition: all 0.3s ease; /* Transição suave */
+    z-index: 999; /* Garante que fique acima de outros elementos */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Esconde o botão até que seja necessário */
+}
+
+#btn-to-top i {
+    font-size: 24px; /* Tamanho do ícone */
+}
+
+#btn-to-top:hover {
+    background-color: rgb(200, 0, 0); /* Tom mais escuro no hover */
+    transform: translateY(-5px); /* Leve elevação */
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6); /* Sombra mais intensa */
+}
+
+/* Visibilidade do botão ao rolar */
+#btn-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header > #interface {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #menu-desktop ul {
+        padding: 0;
+        text-align: center;
+    }
+
+    #menu-desktop ul li {
+        display: block; /* Cada item em uma nova linha */
+        padding: 10px 0;
+    }
+
+    #btn-contato {
+        margin-top: 15px;
+    }
+
+    #topo-site {
+        flex-direction: column-reverse; /* Inverte a ordem para imagem no topo em mobile */
+        gap: 40px;
+    }
+
+    #topo-site #txt-topo-site {
+        margin-right: 0;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    #topo-site h1, #topo-site span {
+        font-size: 32px;
+    }
+
+    #topo-site p {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    #topo-site img {
+        width: 250px;
+        height: 250px;
+    }
+
+    #especialidades #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #especialidades .especialidades-box {
+        width: 90%; /* Ocupa mais largura em telas menores */
+        max-width: 400px; /* Limita para não ficar muito largo */
+    }
+
+    section#sobre #interface {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section#sobre #img-sobre img {
+        width: 280px;
+    }
+
+    section#sobre #txt-sobre {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    section#sobre #txt-sobre h2 {
+        text-align: center;
+    }
+
+    #projetos #interface {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projetos .img-projetos {
+        width: 90%;
+        max-width: 350px;
+        height: 380px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #btn-to-top {
+        padding: 12px 15px;
+        font-size: 16px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #btn-to-top i {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para telas muito pequenas */
+@media screen and (max-width: 480px) {
+    header #logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header nav ul li {
+        padding: 8px 0;
+        font-size: 16px;
+    }
+
+    header #btn-contato button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    #topo-site h1, #topo-site span {
+        font-size: 28px;
+    }
+
+    #topo-site p {
+        font-size: 13px;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    section#sobre #txt-sobre p {
+        font-size: 18px;
+    }
+
+    section#sobre #txt-sobre .btn-social button {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+    #btn-to-top {
+        padding: 10px 12px;
+        font-size: 14px;
+        bottom: 10px;
+        right: 10px;
+    }
+    #btn-to-top i {
+        font-size: 18px;
+    }
+}
